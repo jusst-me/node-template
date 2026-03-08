@@ -36,24 +36,36 @@ This creates `~/.config/husky/init.sh` so your Node/pnpm path is available in Gi
 
 ## Scripts
 
-| Command         | Description                                      |
-| --------------- | ------------------------------------------------ |
-| `pnpm dev`      | Start development with watcher (restart on save) |
-| `pnpm build`    | Compile TypeScript to `dist/`                    |
-| `pnpm start`    | Start the built application                      |
-| `pnpm test`     | Run Jest tests                                   |
-| `pnpm eslint`   | Run ESLint                                       |
-| `pnpm prettier` | Check formatting with Prettier                   |
-| `pnpm format`   | Format code with Prettier                        |
-| `pnpm lint`     | Run ESLint + Prettier                            |
+| Command           | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `pnpm dev`        | Start development with watcher (restart on save) |
+| `pnpm dev:docker` | Start development in Docker with hot reload      |
+| `pnpm build`      | Compile TypeScript to `dist/`                    |
+| `pnpm start`      | Start the built application                      |
+| `pnpm test`       | Run Jest tests                                   |
+| `pnpm eslint`     | Run ESLint                                       |
+| `pnpm prettier`   | Check formatting with Prettier                   |
+| `pnpm format`     | Format code with Prettier                        |
+| `pnpm lint`       | Run ESLint + Prettier                            |
 
 ## Development
+
+**Local** (requires Node.js and pnpm):
 
 ```bash
 pnpm dev
 ```
 
 The application restarts automatically when you save files.
+
+**Docker** (no local Node.js needed):
+
+```bash
+pnpm run dev:docker
+# or: docker compose up app-dev
+```
+
+Source code is mounted as a volume, so changes are reflected immediately via hot reload.
 
 ## Production
 
@@ -63,6 +75,10 @@ pnpm start
 ```
 
 ## Docker
+
+**Development** (hot reload): see [Development](#development) above.
+
+**Production**:
 
 ```bash
 docker build -t node-template .
