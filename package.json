@@ -2,6 +2,17 @@
   "name": "node-template",
   "version": "1.0.0",
   "description": "A minimal Node.js template for backend projects (Express, NestJS, etc.)",
+  "keywords": [
+    "template",
+    "node",
+    "typescript",
+    "backend",
+    "express",
+    "docker",
+    "jest",
+    "eslint",
+    "prettier"
+  ],
   "license": "ISC",
   "author": "Justin van Dijk",
   "type": "commonjs",
