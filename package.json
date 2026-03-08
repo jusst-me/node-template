@@ -21,9 +21,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint": ">=9",
+    "eslint": "^10.0.3",
     "eslint-config-jvd": "latest",
-    "prettier": ">=3",
+    "prettier": "^3.8.1",
     "tsx": "latest",
     "typescript": "latest"
   },
