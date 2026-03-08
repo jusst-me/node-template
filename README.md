@@ -24,6 +24,16 @@ Minimal Node.js TypeScript template for backend projects (Express, NestJS, etc.)
 pnpm install
 ```
 
+### Git GUIs (Fork, SourceTree, etc.)
+
+If pre-commit hooks fail with "command not found", run once:
+
+```bash
+pnpm run prepare:gui
+```
+
+This creates `~/.config/husky/init.sh` so your Node/pnpm path is available in Git GUIs. [Husky docs](https://typicode.github.io/husky/how-to.html#node-version-managers-and-guis)
+
 ## Scripts
 
 | Command         | Description                                      |

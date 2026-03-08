@@ -12,6 +12,7 @@
   "packageManager": "pnpm@10.14.0",
   "scripts": {
     "prepare": "node .husky/install.mjs",
+    "prepare:gui": "sh .husky/setup-gui.sh",
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
